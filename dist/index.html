@@ -30,11 +30,11 @@
       <nav class="desktop-nav" aria-label="Navegação principal">
         <a href="#manifesto">Manifesto</a><a href="#programa">Programa</a><a href="#para-quem">Para quem</a><a href="#sobre">Sobre</a><a href="#faq">FAQ</a>
       </nav>
-      <a class="header-cta" href="#aplicar">APLICAR AGORA</a>
+      <a class="header-cta" href="#aplicar" data-open-application="header">APLICAR AGORA</a>
       <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button>
     </div>
     <nav class="mobile-nav" id="mobile-nav" aria-label="Navegação mobile" hidden>
-      <a href="#manifesto">Manifesto</a><a href="#programa">Programa</a><a href="#para-quem">Para quem</a><a href="#sobre">Sobre</a><a href="#faq">FAQ</a><a href="#aplicar">Aplicar agora</a>
+      <a href="#manifesto">Manifesto</a><a href="#programa">Programa</a><a href="#para-quem">Para quem</a><a href="#sobre">Sobre</a><a href="#faq">FAQ</a><a href="#aplicar" data-open-application="menu">Aplicar agora</a>
     </nav>
   </header>
 
@@ -47,7 +47,7 @@
           <div class="hero-bottom">
             <p class="hero-description">A GPT Experts é uma formação prática para profissionais que querem dominar o ChatGPT e aprender a construir agentes, automações, workflows e aplicações capazes de executar trabalho real.</p>
             <div class="hero-actions">
-              <a class="button button-light" href="#aplicar">APLICAR PARA A PRÓXIMA TURMA</a>
+              <a class="button button-light" href="#aplicar" data-open-application="hero">APLICAR PARA A PRÓXIMA TURMA</a>
               <a class="text-link light-link" href="#programa">CONHECER O PROGRAMA</a>
             </div>
           </div>
@@ -157,10 +157,36 @@
     <section class="final-cta dark" id="aplicar" aria-labelledby="final-title">
       <div class="wrap final-grid">
         <div><p class="eyebrow light reveal">GPT EXPERTS</p><h2 class="display reveal" id="final-title">From user<br><em>to builder.</em></h2></div>
-        <div class="final-content reveal"><p>A próxima geração de profissionais já está aprendendo a construir com inteligência artificial.</p><p>Não apenas usar ferramentas. <strong>Construir com elas.</strong></p><div class="interest-note"><span>PRÓXIMA TURMA</span><p>Inscrições em preparação. O formulário de aplicação será disponibilizado aqui.</p></div><span class="final-footnote">AI BUILDER PROGRAM</span></div>
+        <div class="final-content reveal"><p>A próxima geração de profissionais já está aprendendo a construir com inteligência artificial.</p><p>Não apenas usar ferramentas. <strong>Construir com elas.</strong></p><div class="interest-note"><span>PRÓXIMA TURMA</span><p>Deixe seus dados para receber as informações de inscrição.</p></div><a class="button button-light final-button" href="#aplicar" data-open-application="final">TENHO INTERESSE</a><span class="final-footnote">AI BUILDER PROGRAM</span></div>
       </div>
     </section>
   </main>
+
+  <dialog class="application-dialog" id="application-dialog" aria-labelledby="application-title" aria-describedby="application-description">
+    <div class="application-layout">
+      <div class="application-intro">
+        <div class="application-topline"><span>GPT EXPERTS / AI BUILDER PROGRAM</span><button class="application-close" type="button" aria-label="Fechar formulário" data-close-application>×</button></div>
+        <div class="application-pitch"><p class="application-kicker">PRÓXIMA TURMA</p><h2 id="application-title">Construa<br><em>o próximo passo.</em></h2><p id="application-description">Deixe seus dados para receber as informações da próxima turma da GPT Experts.</p></div>
+        <span class="application-signature">FROM USER TO BUILDER.</span>
+      </div>
+      <div class="application-form-panel">
+        <div class="application-form-heading"><span>01 / SEU INTERESSE</span><p>Vamos conversar sobre o seu próximo passo.</p></div>
+        <form id="application-form" novalidate>
+          <label for="lead-name">NOME COMPLETO</label>
+          <input id="lead-name" name="name" type="text" autocomplete="name" minlength="3" maxlength="120" placeholder="Seu nome e sobrenome" required>
+          <label for="lead-email">E-MAIL</label>
+          <input id="lead-email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="voce@exemplo.com" required>
+          <label for="lead-phone">WHATSAPP</label>
+          <input id="lead-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="30" placeholder="+55 (11) 99999-9999" required>
+          <div class="application-honeypot" aria-hidden="true"><label for="lead-website">Website</label><input id="lead-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+          <label class="application-consent"><input id="lead-consent" name="consent" type="checkbox" required><span>Concordo em receber contato da GPT Experts por e-mail ou WhatsApp. Meus dados e informações desta visita, como origem, campanha e páginas vistas, serão usados para acompanhar meu interesse.</span></label>
+          <button class="application-submit" type="submit">ENVIAR MEU INTERESSE</button>
+          <p class="application-status" id="application-status" role="status" aria-live="polite"></p>
+        </form>
+        <div class="application-success" id="application-success" hidden><span>CADASTRO RECEBIDO</span><h3>Obrigado pelo<br><em>seu interesse.</em></h3><p>Recebemos seus dados. A GPT Experts entrará em contato com as próximas informações.</p><button type="button" data-close-application>VOLTAR PARA O SITE</button></div>
+      </div>
+    </div>
+  </dialog>
 
   <footer class="site-footer dark"><div class="wrap footer-main"><div class="footer-brand"><a href="#topo">GPT Experts</a><span>The AI Builder School</span></div><nav aria-label="Navegação do rodapé"><a href="#programa">Programa</a><a href="#manifesto">Manifesto</a><a href="#sobre">Sobre</a><a href="#faq">FAQ</a></nav></div><div class="wrap footer-bottom"><span>© GPT Experts. Todos os direitos reservados.</span><a href="#topo">VOLTAR AO TOPO</a></div></footer>
 </body>
