@@ -75,3 +75,15 @@ body.application-open{overflow:hidden}
 [hidden].application-success{display:none}
 @media(max-width:800px){.application-dialog{width:min(650px,calc(100% - 28px));max-height:calc(100dvh - 28px)}.application-layout{grid-template-columns:1fr}.application-intro{padding:23px 28px;min-height:210px}.application-pitch h2{font-size:44px;margin:15px 0 12px}.application-pitch>p:last-child,.application-signature{display:none}.application-form-panel{padding:32px 28px 30px}.application-form-heading{margin-bottom:23px}.application-form-heading p{font-size:29px}}
 @media(max-width:500px){.application-dialog{width:100%;max-height:100dvh;height:100dvh;border:0}.application-intro{min-height:193px}.application-form-panel{padding:24px 24px 35px}.application-form-heading{padding-bottom:15px;margin-bottom:20px}.application-form-panel input:not([type=checkbox]){margin-bottom:13px;height:46px}.application-consent{margin-bottom:18px}.application-pitch h2{font-size:42px}}
+
+/* Supplied brand assets */
+.header-identity{display:flex;align-items:center;gap:16px;flex:none}
+.brand{display:block;min-width:0;width:185px;line-height:0}
+.brand img{display:block;width:100%;height:auto}
+.header-partner-badge{display:block;width:120px;height:auto;flex:none}
+.site-header.scrolled .brand img,.site-header.menu-active .brand img{filter:brightness(0)}
+.footer-brand{display:block;line-height:0}
+.footer-brand img{display:block;width:172px;max-width:100%;height:auto}
+@media(max-width:1050px){.header-identity{gap:10px}.brand{width:154px}.header-partner-badge{width:96px}.header-inner{gap:22px}}
+@media(max-width:800px){.brand{width:170px}.header-partner-badge{width:108px}.header-inner{gap:18px}}
+@media(max-width:500px){.header-identity{gap:8px}.brand{width:130px}.header-partner-badge{width:78px}.header-inner{gap:12px}.footer-brand img{width:150px}}

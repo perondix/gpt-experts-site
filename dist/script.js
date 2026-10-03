@@ -112,9 +112,10 @@ if ('IntersectionObserver' in window) {
   document.querySelectorAll('main section[id]').forEach((section) => sectionObserver.observe(section));
 }
 
-function openApplication(event) {
+function openApplication(event, trigger = event?.currentTarget) {
   if (event) event.preventDefault();
-  applicationTrigger = event?.currentTarget || document.activeElement;
+  if (applicationDialog.open) return;
+  applicationTrigger = trigger || document.activeElement;
   applicationSource = applicationTrigger?.dataset.openApplication || 'direct';
   if (!mobileNav.hidden) closeMenu();
   applicationDialog.showModal();
@@ -122,7 +123,10 @@ function openApplication(event) {
   applicationForm.querySelector('#lead-name').focus();
 }
 
-document.querySelectorAll('[data-open-application]').forEach((link) => link.addEventListener('click', openApplication));
+document.addEventListener('click', (event) => {
+  const trigger = event.target.closest('[data-open-application], a[href="#aplicar"]');
+  if (trigger) openApplication(event, trigger);
+});
 document.querySelectorAll('[data-close-application]').forEach((button) => button.addEventListener('click', () => applicationDialog.close()));
 applicationDialog.addEventListener('click', (event) => {
   if (event.target === applicationDialog) applicationDialog.close();
