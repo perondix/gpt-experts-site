@@ -111,3 +111,13 @@ body.application-open{overflow:hidden}
 @media(max-width:800px){.header-cta{display:inline-flex}.vsl-section{padding:70px 0}}
 @media(max-width:600px){.header-cta{font-size:8px;padding:10px 9px}.hero h1{margin-top:0}.vsl-section{padding:52px 0}.vsl-placeholder span{font-size:8px}.vsl-placeholder strong{font-size:clamp(24px,6vw,34px)}}
 @media(max-width:380px){.brand{width:100px}.header-identity{gap:6px}.header-partner-badge{width:58px}.header-inner{gap:8px}.header-cta{padding:9px 7px;font-size:7.5px}}
+
+/* Center the hero composition vertically while preserving room for the fixed header. */
+.hero{min-height:clamp(700px,86svh,860px)}
+.hero-grid{display:flex;align-items:center;padding-top:clamp(112px,14vh,164px);padding-bottom:clamp(44px,8vh,90px)}
+.hero-copy{width:100%}
+.hero h1{margin:0 0 clamp(34px,4vh,52px)}
+.hero-bottom{grid-template-columns:minmax(0,480px) max-content;gap:clamp(24px,5vw,74px);align-items:end}
+@media(max-width:1000px){.hero-bottom{grid-template-columns:minmax(0,1fr) max-content}}
+@media(max-width:800px){.hero{min-height:min(100svh,720px)}.hero-grid{padding-top:104px;padding-bottom:42px}.hero-bottom{display:flex;flex-direction:column;align-items:flex-start;gap:24px}.hero-actions{width:100%}.hero-actions .button{width:100%;max-width:400px}}
+@media(max-width:600px){.hero-grid{padding-top:100px;padding-bottom:36px}.hero h1{margin-bottom:30px}}
