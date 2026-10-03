@@ -98,3 +98,16 @@ body.application-open{overflow:hidden}
 .founder-name{font-size:clamp(72px,8vw,118px);font-weight:600;line-height:.88;letter-spacing:-.075em}
 .application-form-heading p{font-size:28px;font-weight:500;letter-spacing:-.055em;line-height:1.12}
 @media(max-width:600px){.founder-name{font-size:clamp(67px,14vw,91px)}.application-form-heading p{font-size:26px}}
+
+/* Streamlined hero and a reserved 16:9 area for the upcoming VSL. */
+.header-cta{margin-left:auto;background:var(--warm);border-color:var(--warm);color:var(--ink)}
+.header-cta:hover{background:transparent;color:var(--warm)}
+.site-header.scrolled .header-cta{background:transparent;border-color:var(--ink);color:var(--ink)}
+.hero h1{margin-top:0}
+.vsl-section{padding:100px 0;background:var(--paper)}
+.vsl-placeholder{width:min(100%,1120px);aspect-ratio:16/9;margin:auto;border:1px solid #303030;background:#111;color:var(--warm);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center}
+.vsl-placeholder span{font-size:10px;font-weight:700;letter-spacing:.2em}
+.vsl-placeholder strong{font-size:clamp(32px,4vw,54px);font-weight:500;letter-spacing:-.055em;line-height:1}
+@media(max-width:800px){.header-cta{display:inline-flex}.vsl-section{padding:70px 0}}
+@media(max-width:600px){.header-cta{font-size:8px;padding:10px 9px}.hero h1{margin-top:0}.vsl-section{padding:52px 0}.vsl-placeholder span{font-size:8px}.vsl-placeholder strong{font-size:clamp(24px,6vw,34px)}}
+@media(max-width:380px){.brand{width:100px}.header-identity{gap:6px}.header-partner-badge{width:58px}.header-inner{gap:8px}.header-cta{padding:9px 7px;font-size:7.5px}}
