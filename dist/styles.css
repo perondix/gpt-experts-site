@@ -87,3 +87,14 @@ body.application-open{overflow:hidden}
 @media(max-width:1050px){.header-identity{gap:10px}.brand{width:154px}.header-partner-badge{width:96px}.header-inner{gap:22px}}
 @media(max-width:800px){.brand{width:170px}.header-partner-badge{width:108px}.header-inner{gap:18px}}
 @media(max-width:500px){.header-identity{gap:8px}.brand{width:130px}.header-partner-badge{width:78px}.header-inner{gap:12px}.footer-brand img{width:150px}}
+
+/* Typography follows the geometric shapes of the new wordmark. */
+:root{--serif:'Space Grotesk',Arial,sans-serif}
+.display,.hero h1,.manifesto-title,.manifesto-signature,.application-pitch h2,.application-success h3{font-family:var(--serif);font-weight:700;letter-spacing:-.07em;line-height:1}
+.display em,.hero h1 em,.manifesto-title em,.manifesto-signature em,.application-pitch h2 em,.application-success h3 em{font-family:var(--serif);font-style:normal;font-weight:400;letter-spacing:-.065em}
+.journey-footer strong,.program-closing strong{font-style:normal;font-weight:500}
+.shift-statement,.journey-footer,.program-closing>p,.audience-statement{font-weight:500;letter-spacing:-.055em}
+.curriculum h3,.audience-row h3{font-weight:600;letter-spacing:-.045em}
+.founder-name{font-size:clamp(72px,8vw,118px);font-weight:600;line-height:.88;letter-spacing:-.075em}
+.application-form-heading p{font-size:28px;font-weight:500;letter-spacing:-.055em;line-height:1.12}
+@media(max-width:600px){.founder-name{font-size:clamp(67px,14vw,91px)}.application-form-heading p{font-size:26px}}
