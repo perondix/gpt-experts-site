@@ -17,16 +17,16 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.js .reveal{opacity:1;transform:none}}
 
 /* Quiet editorial treatment: image, copy and rules carry the composition. */
-.hero::before{content:"";position:absolute;inset:0;background:url('./hero-studio.jpg') center 48%/cover no-repeat}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,8,.78) 0%,rgba(8,8,8,.61) 62%,rgba(8,8,8,.48) 100%)}
+.hero::before{content:"";position:absolute;inset:0;background:url('./hero-florianopolis.jpg') center center/cover no-repeat}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,8,.46) 0%,rgba(8,8,8,.20) 53%,rgba(8,8,8,.06) 100%)}
 .hero-grid{position:relative;z-index:1;grid-template-columns:1fr}
 .hero-description{color:#e4e1db}
 .shift .section-grid{display:block}
 .header-cta,.button{justify-content:center;text-align:center;gap:0}
 .text-link{justify-content:center;text-align:center;gap:0}
 .journey-step{padding-right:22px}
-@media(max-width:800px){.hero::before{background-position:57% center}.hero::after{background:rgba(8,8,8,.68)}}
-@media(max-width:600px){.hero::after{background:linear-gradient(90deg,rgba(8,8,8,.76),rgba(8,8,8,.67))}}
+@media(max-width:800px){.hero::before{background-position:68% center}.hero::after{background:rgba(8,8,8,.62)}}
+@media(max-width:600px){.hero::after{background:linear-gradient(90deg,rgba(8,8,8,.68),rgba(8,8,8,.55))}}
 
 /* Bold sans headlines with italic serif accents echo the manifesto signature. */
 .display,.hero h1,.manifesto-title{font-family:var(--sans);font-weight:700;letter-spacing:-.072em;line-height:.98}
