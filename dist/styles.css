@@ -123,3 +123,8 @@ body.application-open{overflow:hidden}
 @media(max-width:1000px){.hero-bottom{grid-template-columns:minmax(0,1fr) max-content}}
 @media(max-width:800px){.hero{min-height:min(100svh,720px)}.hero-grid{padding-top:104px;padding-bottom:42px}.hero-bottom{display:flex;flex-direction:column;align-items:flex-start;gap:24px}.hero-actions{width:100%}.hero-actions .button{width:100%;max-width:400px}}
 @media(max-width:600px){.hero-grid{padding-top:100px;padding-bottom:36px}.hero h1{margin-bottom:30px}}
+
+/* Keep Lucas's portrait and biography centered alongside one another. */
+.founder .display{max-width:850px}
+.founder-grid{align-items:center}
+.founder-bio{margin-top:0}
