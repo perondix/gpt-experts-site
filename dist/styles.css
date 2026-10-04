@@ -105,13 +105,13 @@ body.application-open{overflow:hidden}
 .site-header.scrolled .header-cta{background:transparent;border-color:var(--ink);color:var(--ink)}
 .hero h1{margin-top:0}
 .vsl-section{padding:100px 0;background:var(--paper)}
-.vsl-title{max-width:1120px;margin:0 auto 54px;font-family:var(--serif);font-size:clamp(42px,5.2vw,76px);font-weight:700;letter-spacing:-.065em;line-height:1.04}
+.vsl-title{margin:0 auto 54px;font-family:var(--serif);font-size:clamp(27.3px,3.38vw,49.4px);font-weight:700;letter-spacing:-.065em;line-height:1.04;text-align:center}
 .vsl-title em{font-style:normal;font-weight:400}
 .vsl-placeholder{width:min(100%,1120px);aspect-ratio:16/9;margin:auto;border:1px solid #303030;background:#111;color:var(--warm);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center}
 .vsl-placeholder span{font-size:10px;font-weight:700;letter-spacing:.2em}
 .vsl-placeholder strong{font-size:clamp(32px,4vw,54px);font-weight:500;letter-spacing:-.055em;line-height:1}
-@media(max-width:800px){.header-cta{display:inline-flex}.vsl-section{padding:70px 0}.vsl-title{font-size:clamp(38px,7.2vw,56px);margin-bottom:36px}}
-@media(max-width:600px){.header-cta{font-size:8px;padding:10px 9px}.hero h1{margin-top:0}.vsl-section{padding:52px 0}.vsl-title{font-size:clamp(34px,9vw,44px);margin-bottom:28px}.vsl-placeholder span{font-size:8px}.vsl-placeholder strong{font-size:clamp(24px,6vw,34px)}}
+@media(max-width:800px){.header-cta{display:inline-flex}.vsl-section{padding:70px 0}.vsl-title{font-size:clamp(24.7px,4.68vw,36.4px);margin-bottom:36px}}
+@media(max-width:600px){.header-cta{font-size:8px;padding:10px 9px}.hero h1{margin-top:0}.vsl-section{padding:52px 0}.vsl-title{font-size:clamp(22.1px,5.85vw,28.6px);margin-bottom:28px}.vsl-placeholder span{font-size:8px}.vsl-placeholder strong{font-size:clamp(24px,6vw,34px)}}
 @media(max-width:380px){.brand{width:100px}.header-identity{gap:6px}.header-partner-badge{width:58px}.header-inner{gap:8px}.header-cta{padding:9px 7px;font-size:7.5px}}
 
 /* Center the hero composition vertically while preserving room for the fixed header. */
