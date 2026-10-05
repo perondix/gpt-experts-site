@@ -152,3 +152,20 @@ body.application-open{overflow:hidden}
 /* Keep the badge at the left edge, centered vertically within the footer block. */
 .footer-main{display:flex;justify-content:space-between;align-items:center;min-height:270px;gap:50px}
 @media(max-width:700px){.footer-main{display:block;min-height:auto}.footer-main nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px;margin:55px 0 65px;text-align:left}}
+
+/* Three audience profiles become a short, native scroll stack on phones. */
+@media(max-width:700px){
+  .audience-heading{margin-bottom:48px}
+  .audience-list{border:0;max-width:540px;margin-inline:auto}
+  .audience-row{position:sticky;top:calc(84px + var(--card-index)*36px);z-index:var(--card-layer);display:flex;flex-direction:column;gap:0;min-height:clamp(320px,92vw,440px);margin:0 0 18px;padding:18px 24px 26px;border:1px solid #cbc8c2;border-radius:4px;background:#faf9f6;box-shadow:0 15px 30px rgba(17,17,17,.08)}
+  .audience-row:nth-child(1){--card-index:0;--card-layer:1}
+  .audience-row:nth-child(2){--card-index:1;--card-layer:2;background:#e2e0db}
+  .audience-row:nth-child(3){--card-index:2;--card-layer:3;background:#181818;border-color:#181818;color:var(--warm)}
+  .audience-row>span{padding:0;font-size:10px;line-height:1.2}
+  .audience-row h3{font-size:clamp(27px,7.1vw,35px);line-height:1.08;max-width:none;margin:auto 0 18px}
+  .audience-row p{font-size:13px;line-height:1.6;max-width:none;margin:0;color:#5e5e5e}
+  .audience-row:nth-child(3) p{color:#d0ceca}
+  .audience-statement{margin-top:60px}
+}
+@media(max-width:360px){.audience-row{padding-inline:20px}.audience-row h3{font-size:26px}}
+@media(max-width:700px) and (prefers-reduced-motion:reduce){.audience-row{position:relative;top:auto;box-shadow:none}}
