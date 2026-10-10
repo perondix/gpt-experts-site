@@ -169,3 +169,35 @@ body.application-open{overflow:hidden}
 }
 @media(max-width:360px){.audience-row{padding-inline:20px}.audience-row h3{font-size:26px}}
 @media(max-width:700px) and (prefers-reduced-motion:reduce){.audience-row{position:relative;top:auto;box-shadow:none}}
+
+/* Dark audience section with the application call to action after the profiles. */
+.audience{background:var(--ink);color:var(--warm)}
+.audience .section-topline,.audience-list,.audience-row{border-color:#484848}
+.audience .eyebrow,.audience-row>span{color:#c9c7c2}
+.audience-heading p,.audience-row p{color:#bbb9b4}
+.audience-bottom{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(255px,.65fr);align-items:end;gap:8%;border-top:1px solid #484848;padding-top:36px;margin-top:82px}
+.audience-statement{margin:0}
+.audience-action{max-width:330px;scroll-margin-top:100px}
+.audience-action>span{display:block;font-size:10px;font-weight:700;letter-spacing:.18em;color:#c9c7c2}
+.audience-action p{font-size:15px;line-height:1.65;color:#bbb9b4;margin:15px 0 24px}
+.audience-action .button{min-width:225px}
+@media(max-width:900px){.audience-bottom{display:block}.audience-action{margin-top:38px}}
+@media(max-width:700px){
+  .audience-list{border:0}
+  .audience-row{color:var(--ink);background:#f4f2ed;border-color:#d2cfc9;box-shadow:0 15px 30px rgba(0,0,0,.28)}
+  .audience-row:nth-child(2){background:#deddd9}
+  .audience-row:nth-child(3){background:#c9d2dc;border-color:#c9d2dc;color:var(--ink)}
+  .audience-row>span,.audience-row h3{color:inherit}
+  .audience-row p,.audience-row:nth-child(3) p{color:#444b52}
+  .audience-bottom{margin-top:70px}
+  .audience-statement{font-size:clamp(30px,8vw,42px)}
+  .audience-action .button{width:100%}
+}
+
+/* Partner specializations sit below the main footer row at a readable scale. */
+.footer-expertise{display:flex;align-items:center;justify-content:space-between;gap:28px;border-top:1px solid var(--line-dark);padding:30px 0 46px}
+.footer-expertise .eyebrow{max-width:220px;color:#c6c3be}
+.footer-expertise-badges{display:flex;align-items:center;gap:18px}
+.footer-expertise-badges img{display:block;width:clamp(145px,11vw,162px);height:auto;aspect-ratio:1}
+@media(max-width:900px){.footer-expertise{display:block}.footer-expertise .eyebrow{max-width:none}.footer-expertise-badges{margin-top:26px}}
+@media(max-width:600px){.footer-expertise-badges{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-width:320px;gap:14px}.footer-expertise-badges img{width:100%}.footer-expertise-badges img:last-child{grid-column:1/-1;justify-self:center;width:calc((100% - 14px)/2)}}
