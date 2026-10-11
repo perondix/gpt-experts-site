@@ -1,4 +1,21 @@
 {
   "framework": null,
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/gpt-modelo-ia",
+      "destination": "/gpt-modelo-ia/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/gpt-modelo-ia/:path*",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
+  ]
 }

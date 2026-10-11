@@ -1,0 +1,54 @@
+.tutorial-page{background:#fff;color:#111}
+.tutorial-header{border-bottom:1px solid #e5e5e5}
+.tutorial-header .wrap{height:88px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.tutorial-header .brand img{filter:brightness(0)}
+.back-home{font-size:12px;font-weight:500}
+.back-home span{margin-left:12px}
+.tutorial-main{width:min(840px,calc(100% - 64px));margin:auto;padding:80px 0 90px}
+.tutorial-kicker{font-size:10px;font-weight:700;letter-spacing:.15em;margin:0 0 20px}
+.tutorial-intro h1{font-family:var(--serif);font-size:clamp(38px,5.2vw,62px);line-height:1.06;font-weight:700;letter-spacing:-.06em;margin:0 0 28px}
+.tutorial-intro h1 span{font-weight:400}
+.tutorial-lead{font-size:17px;line-height:1.75;max-width:640px;margin:0 0 40px}
+.tutorial-nav{display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid #ddd;margin-bottom:36px}
+.tutorial-nav a{display:flex;flex-direction:column;gap:10px;padding:20px 14px;font-size:12px;border-right:1px solid #ddd;transition:background .2s}
+.tutorial-nav a:first-child{padding-left:0}
+.tutorial-nav a:last-child{border:0}
+.tutorial-nav a:hover{background:#f5f5f5}
+.tutorial-nav span{font-family:var(--serif);font-size:20px;font-weight:500}
+.tutorial-note{border-left:2px solid #111;padding:0 0 0 22px;margin-bottom:62px;font-size:13px;line-height:1.8}
+.tutorial-note>strong{display:block;font-size:14px;margin-bottom:8px}
+.tutorial-note p{margin:0 0 10px}
+.tutorial-step{border-top:1px solid #ddd;padding-top:36px;margin-bottom:68px;scroll-margin-top:28px}
+.step-heading{display:flex;align-items:center;gap:23px;margin-bottom:20px}
+.tutorial-number{font-family:var(--serif);font-size:42px;line-height:1;letter-spacing:-.05em}
+.step-heading .tutorial-kicker{font-size:9px;margin:0 0 7px}
+.step-heading h2{font-family:var(--serif);font-size:clamp(25px,3.2vw,34px);line-height:1.15;letter-spacing:-.05em;margin:0}
+.step-description{font-size:14px;line-height:1.8;max-width:700px;margin-bottom:24px}
+.prompt-card{border:1px solid #d9d9d9;border-radius:8px;overflow:hidden}
+.prompt-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 22px;background:#f6f6f6;border-bottom:1px solid #ddd}
+.prompt-toolbar>span{font-size:10px;font-weight:700;letter-spacing:.13em}
+.prompt-toolbar button{border:1px solid #111;border-radius:4px;padding:9px 13px;min-height:40px;background:#111;color:#fff;font-size:12px;font-weight:500;cursor:pointer}
+.prompt-toolbar button:hover{background:#333}
+.prompt-toolbar button span{margin-left:14px}
+.prompt-card summary{display:flex;justify-content:space-between;align-items:center;min-height:48px;padding:14px 22px;font-size:12px;font-weight:600;cursor:pointer;list-style:none}
+.prompt-card summary::-webkit-details-marker{display:none}
+.prompt-card summary>span{font-size:20px;line-height:1}
+.prompt-card details[open] summary>span{transform:rotate(45deg)}
+.prompt-content{padding:8px 22px 22px;white-space:pre-wrap;font-size:13px;line-height:1.8;overflow-wrap:anywhere}
+.prompt-content p{margin:0 0 20px}
+.prompt-content p:last-child{margin:0}
+.prompt-content strong{font-size:10px;font-weight:700;letter-spacing:.07em}
+.prompt-bottom{display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:17px 22px;border-top:1px solid #ddd}
+.chatgpt-link{display:inline-flex;justify-content:space-between;gap:22px;font-size:12px;font-weight:600;border-bottom:1px solid #111;padding-bottom:4px;min-height:28px;align-items:center}
+.prompt-status{font-size:11px;line-height:1.6}
+.tutorial-example{width:min(100%,520px);margin:32px auto 0}
+#angulos .tutorial-example{width:min(100%,660px)}
+.tutorial-example img{display:block;width:100%;height:auto;border-radius:6px}
+.tutorial-example figcaption{font-size:11px;line-height:1.7;text-align:center;margin:13px auto 0;max-width:470px}
+.tutorial-end{display:flex;align-items:start;gap:18px;border-top:1px solid #ddd;padding-top:30px;font-size:13px;line-height:1.8}
+.tutorial-end>span{font-size:22px}
+.tutorial-end p{margin:0}
+.tutorial-end a{margin-left:auto;white-space:nowrap;font-size:11px;text-decoration:underline}
+.tutorial-page .site-footer{margin-top:0}
+@media(max-width:600px){.tutorial-header .wrap{height:72px}.tutorial-header .wrap{width:calc(100% - 40px)}.back-home{font-size:10px}.back-home span{margin-left:4px}.tutorial-main{width:calc(100% - 40px);padding:48px 0 56px}.tutorial-intro h1{font-size:39px}.tutorial-lead{font-size:14px;line-height:1.8}.tutorial-nav{grid-template-columns:repeat(2,1fr);margin-bottom:28px}.tutorial-nav a{padding:15px 12px;flex-direction:row;align-items:center;gap:12px}.tutorial-nav a:first-child{padding-left:12px}.tutorial-nav a:nth-child(2){border-right:0}.tutorial-nav a:nth-child(-n+2){border-bottom:1px solid #ddd}.tutorial-nav span{font-size:16px}.tutorial-note{padding-left:16px;margin-bottom:44px}.tutorial-step{padding-top:28px;margin-bottom:48px}.step-heading{gap:16px}.tutorial-number{font-size:34px}.prompt-toolbar,.prompt-bottom{padding:14px 16px}.prompt-card summary{padding:14px 16px}.prompt-content{padding:6px 16px 20px}.tutorial-end{flex-wrap:wrap}.tutorial-end a{margin-left:40px}.tutorial-example{margin-top:24px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tutorial-nav a{transition:none}}
