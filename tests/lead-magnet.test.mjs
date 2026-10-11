@@ -108,6 +108,6 @@ test('repeated submissions from the same instance IP are throttled', async (t) =
 test('public page and script do not contain the gated tutorial', async () => {
   const page = await readFile(new URL('../dist/agente-ai-gpt/index.html', import.meta.url), 'utf8');
   const script = await readFile(new URL('../dist/agente-ai-gpt/guide.js', import.meta.url), 'utf8');
-  assert.doesNotMatch(page + script, /PROMPT \/ DELEGAR A PRIMEIRA TAREFA|CLIENTE:|CONTEXTO DO PROJETO/);
+  assert.doesNotMatch(page + script, /PROCEDIMENTO OBRIGATÓRIO|Execute o fechamento operacional|Analise a transcrição da reunião fornecida/);
   assert.match(page, /guide-content[^>]*hidden/);
 });
