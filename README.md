@@ -13,3 +13,19 @@ Adicione as seguintes variáveis de ambiente ao projeto `gpt-experts-site` e fa�
 O token precisa de permissão de leitura e escrita para registros de pessoas e negócios, entradas de lista e notas, além de leitura da configuração de objetos e listas: `record_permission:read-write`, `list_entry:read-write`, `note:read-write`, `object_configuration:read`, `list_configuration:read`.
 
 O formulário só mostra confirmação após o registro, a entrada na lista e a nota no Attio serem concluídos. Se a integração falhar, o visitante vê uma mensagem de erro e pode tentar novamente.
+
+## Lead magnet: Projeto + Work
+
+`/agente-ai-gpt` apresenta o guia gratuito de Projeto + Work no ChatGPT. O visitante informa apenas o e-mail. `POST /api/lead-magnet` cria ou atualiza uma pessoa no Attio pelo e-mail, preserva os demais atributos e registra uma nota com a origem do guia, UTMs e a opção de receber novidades. Não cria negócios nem insere o lead na lista de inscrições do curso.
+
+O tutorial fica em `lib/agent-guide.mjs`, fora dos arquivos públicos de `dist/`. A API só devolve o conteúdo depois de confirmar o registro e a nota no CRM. Um cookie assinado, HttpOnly, SameSite=Lax e Secure em produção permite reabrir o guia neste navegador por sete dias. `GET /api/lead-magnet` valida esse acesso. A assinatura usa a chave Attio com contexto específico para este guia; rotacionar a chave invalida os acessos existentes. Não há verificação da caixa de e-mail.
+
+A integração reutiliza `ATTIO_API_KEY` e precisa de escrita em registros de pessoas e notas. A configuração da lista do formulário original não é necessária para este guia. As respostas da API usam `private, no-store`. A limitação de cinco tentativas por minuto é local à instância; não substitui um limite distribuído de tráfego.
+
+Os campos do briefing e a seleção de etapas do tutorial não são enviados ao CRM. Somente o progresso é guardado no localStorage; a autenticação não depende dele. O consentimento para novidades é opcional e é registrado na nota, sem iniciar disparos de e-mail.
+
+Verificação da captura, falhas do CRM, cookie, expiração e bloqueio do conteúdo:
+
+```sh
+node --test tests/lead-magnet.test.mjs
+```

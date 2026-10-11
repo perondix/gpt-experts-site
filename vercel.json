@@ -5,6 +5,10 @@
     {
       "source": "/gpt-modelo-ia",
       "destination": "/gpt-modelo-ia/index.html"
+    },
+    {
+      "source": "/agente-ai-gpt",
+      "destination": "/agente-ai-gpt/index.html"
     }
   ],
   "headers": [
