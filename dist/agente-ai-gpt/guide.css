@@ -69,3 +69,14 @@ html:has(.agent-page){scroll-behavior:auto}
 .guide-checklist input:checked+span{color:#555}
 .resource-detail>p,.case-example>p{margin-top:14px}
 #checklist,#exemplos{scroll-margin-top:24px}
+.framework-overview{margin:0 0 44px}
+.framework-overview h2{font-size:23px}
+.framework-overview>p{font-size:16px}
+.framework-map{list-style:none;padding:0!important;margin:24px 0!important}
+.framework-map li{position:relative;padding:0;margin:0}
+.framework-map li:not(:last-child)::after{content:'';position:absolute;left:18px;top:46px;bottom:-8px;width:1px;background:#bbb;pointer-events:none}
+.framework-map a{display:flex;gap:16px;align-items:flex-start;min-height:76px;padding:8px 0;text-decoration:none}
+.framework-number{display:flex;align-items:center;justify-content:center;width:37px;height:37px;flex:none;border:1px solid #111;border-radius:50%;font-size:13px;background:#fff}
+.framework-map strong{font-size:17px;line-height:1.5}
+.framework-description{display:block;font-size:15px;line-height:1.6;color:#444;margin:3px 0 10px}
+.framework-map a:hover strong{text-decoration:underline;text-underline-offset:4px}
