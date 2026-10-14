@@ -31,3 +31,11 @@ Verificação da captura, falhas do CRM, cookie, expiração e bloqueio do conte
 ```sh
 node --test tests/lead-magnet.test.mjs
 ```
+
+## Tutorial: aplicativo web com Codex
+
+`/app-web-codex` ensina a construir um MVP de gastos no cartão com Codex, Supabase MCP e Vercel. Inclui roteiro de oito horas, ilustrações SVG identificadas como exemplos, prompts por entrega e checklist. O tutorial não cria aplicativos nem conecta contas do visitante.
+
+`/api/codex-guide` usa a mesma implementação de captura em `lib/lead-magnet-handler.mjs`, com origem Attio, assinatura e cookie próprios (`gpt_codex_guide`, caminho `/api/codex-guide`). O artigo protegido fica em `lib/codex-guide.mjs`. O acesso ao guia anterior mantém seu contrato, assinatura e cookie existentes; um guia não desbloqueia o outro. As imagens ilustrativas são públicas; as instruções e os prompts são entregues apenas pela API após cadastro ou cookie válido.
+
+Execute `node --test tests/*.test.mjs` para verificar os dois fluxos, incluindo isolamento de cookies e bloqueio em falhas do CRM.

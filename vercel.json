@@ -9,6 +9,10 @@
     {
       "source": "/agente-ai-gpt",
       "destination": "/agente-ai-gpt/index.html"
+    },
+    {
+      "source": "/app-web-codex",
+      "destination": "/app-web-codex/index.html"
     }
   ],
   "headers": [

@@ -1,0 +1,13 @@
+.lab-roadmap{border-top:1px solid #ddd;margin:32px 0;padding-top:24px}
+.lab-roadmap h2{font-size:23px}
+.lab-roadmap>p{font-size:16px}
+.lab-roadmap ol{list-style:none;padding:0;margin:20px 0}
+.lab-roadmap li{padding:0;margin:0;border-bottom:1px solid #e5e5e5}
+.lab-roadmap a{display:block;padding:14px 0;min-height:60px;text-decoration:none;font-size:16px;line-height:1.6}
+.lab-roadmap a:hover{text-decoration:underline}
+.lab-slot{display:block;font-size:13px;font-weight:600;color:#555;margin-bottom:4px}
+.lab-figure{margin:30px auto;max-width:440px}
+.lab-figure>a{display:block}
+.lab-figure img{display:block;width:100%;height:auto;border:1px solid #ddd;border-radius:12px;background:#fafafa}
+.lab-figure figcaption{font-size:14px;line-height:1.7;color:#555;margin-top:12px}
+@media(min-width:640px){.lab-roadmap ol{display:grid;grid-template-columns:1fr 1fr;gap:0 28px}}

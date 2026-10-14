@@ -1,4 +1,5 @@
 (() => {
+  const endpoint = document.body.dataset.guideEndpoint || '/api/lead-magnet';
   const form = document.getElementById('lead-form');
   const status = document.getElementById('lead-status');
   const gate = document.getElementById('acesso');
@@ -40,7 +41,7 @@
     const campaign = Object.fromEntries(['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
       .flatMap((key) => params.get(key) ? [[key, params.get(key).slice(0, 150)]] : []));
     try {
-      const response = await fetch('/api/lead-magnet', {
+      const response = await fetch(endpoint, {
         method: 'POST', credentials: 'same-origin', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: data.get('email'), website: data.get('website'), marketing_consent: false, campaign, referrer: document.referrer }),
         signal: AbortSignal.timeout(30000)
@@ -79,7 +80,7 @@
 
   async function restore() {
     try {
-      const response = await fetch('/api/lead-magnet', { credentials: 'same-origin', cache: 'no-store', signal: AbortSignal.timeout(10000) });
+      const response = await fetch(endpoint, { credentials: 'same-origin', cache: 'no-store', signal: AbortSignal.timeout(10000) });
       if (response.ok) { unlock(await response.json()); return; }
       if (response.status !== 401) throw new Error('restore_failed');
     } catch {

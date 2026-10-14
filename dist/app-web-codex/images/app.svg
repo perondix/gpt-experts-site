@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="730" viewBox="0 0 360 730" role="img" aria-labelledby="title desc"><title id="title">Meu Mês — referência de interface</title><desc id="desc">Dados fictícios: três gastos, total mensal de mil e seiscentos reais.</desc><rect width="360" height="730" fill="#fafaf8"/>
+<text x="24" y="34" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#666">REFERÊNCIA VISUAL · DADOS FICTÍCIOS</text>
+<rect x="16" y="55" width="328" height="653" rx="20" fill="#fff" stroke="#d9d9d5"/>
+<text x="36" y="92" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#222">Meu Mês</text>
+<text x="36" y="115" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#666">Seus gastos, em um só lugar.</text>
+<text x="36" y="152" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#222">Outubro de 2026</text>
+<text x="282" y="152" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#222">⌄</text>
+<rect x="32" y="175" width="296" height="128" rx="12" fill="#111" stroke="#111"/>
+<text x="50" y="204" font-family="Arial, sans-serif" font-size="11" font-weight="600" fill="#ccc">TOTAL DO MÊS</text>
+<text x="50" y="247" font-family="Arial, sans-serif" font-size="32" font-weight="600" fill="#fff">R$ 1.600,00</text>
+<text x="50" y="278" font-family="Arial, sans-serif" font-size="12" font-weight="400" fill="#ddd">3 gastos · Cartão pessoal</text>
+<rect x="32" y="321" width="296" height="43" rx="8" fill="#e9f2ed" stroke="#d4e3d9"/>
+<text x="101" y="348" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#214b36">+  Adicionar gasto</text>
+<text x="36" y="398" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#222">Últimos lançamentos</text>
+<text x="36" y="427" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#222">Notebook</text>
+<text x="36" y="445" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#666">Equipamentos</text>
+<text x="250" y="427" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#222">1.200,00</text>
+<path d="M36 456 L320 456" fill="none" stroke="#e8e8e8"/>
+<text x="36" y="481" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#222">Assinatura</text>
+<text x="36" y="499" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#666">Serviços</text>
+<text x="250" y="481" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#222">89,90</text>
+<path d="M36 510 L320 510" fill="none" stroke="#e8e8e8"/>
+<text x="36" y="535" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#222">Mercado</text>
+<text x="36" y="553" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#666">Alimentação</text>
+<text x="250" y="535" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#222">310,10</text>
+<path d="M36 564 L320 564" fill="none" stroke="#e8e8e8"/>
+<text x="36" y="601" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#222">Por categoria</text>
+<rect x="36" y="615" width="204" height="10" rx="0" fill="#111" stroke="#111"/>
+<rect x="240" y="615" width="53" height="10" rx="0" fill="#91b49d" stroke="#91b49d"/>
+<rect x="293" y="615" width="23" height="10" rx="0" fill="#d6e3da" stroke="#d6e3da"/>
+<text x="36" y="652" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#666">Valores em BRL · Mês escolhido por você</text>
+<text x="36" y="683" font-family="Arial, sans-serif" font-size="12" font-weight="500" fill="#222">Início          Cartões          Conta</text>
+</svg>
