@@ -1,10 +1,12 @@
 # GPT Experts
 
-Landing page estática em `dist/`, publicada na Vercel. O formulário de interesse envia dados para a função `api/apply.mjs`, que cadastra a pessoa, cria um negócio quando a lista do Attio é de negócios, adiciona o registro à lista e registra a origem da visita em uma nota.
+Landing page estática em `dist/`, publicada na Vercel. O formulário de interesse usa a função `api/apply.mjs`. O destino é o Baserow quando `BASEROW_MCP_URL` está configurada. Sem essa variável, o formulário usa a integração existente do Attio.
 
 ## Configuração na Vercel
 
-Adicione as seguintes variáveis de ambiente ao projeto `gpt-experts-site` e faça um novo deploy:
+Para ativar o Baserow, configure `BASEROW_MCP_URL` como variável sensível na Vercel e faça um novo deploy. Use uma conexão MCP dedicada com a ferramenta `create_rows`. A integração insere uma linha na tabela `Site GPT Experts → Table` (ID `1334579`) com os campos `Name`, `email`, `WhatsApp` e `Aceitou termos`. Quando presentes no link de entrada, as UTMs são salvas em `UTM_SOURCE`, `UTM_MEDIUM`, `UTM_CAMPAIGN`, `UTM_CONTENT` e `UTM_TERM`.
+
+Para a integração do Attio, mantenha as seguintes variáveis:
 
 - `ATTIO_API_KEY` (obrigatória): token de workspace do Attio. Nunca coloque o token no código ou em `dist/`.
 - `ATTIO_LIST_ID` (opcional): ID da lista que receberá os cadastros. Se não for definida, a função procura pelo slug ou nome `gpt-experts-deals`.
@@ -12,7 +14,7 @@ Adicione as seguintes variáveis de ambiente ao projeto `gpt-experts-site` e fa�
 
 O token precisa de permissão de leitura e escrita para registros de pessoas e negócios, entradas de lista e notas, além de leitura da configuração de objetos e listas: `record_permission:read-write`, `list_entry:read-write`, `note:read-write`, `object_configuration:read`, `list_configuration:read`.
 
-O formulário só mostra confirmação após o registro, a entrada na lista e a nota no Attio serem concluídos. Se a integração falhar, o visitante vê uma mensagem de erro e pode tentar novamente.
+O formulário só confirma o envio depois de o Baserow devolver o ID da linha criada, ou de o Attio concluir o registro, a entrada na lista e a nota. Quando o Baserow está configurado, uma falha retorna erro e não envia o cadastro ao Attio.
 
 ## Lead magnet: primeiro agente de IA
 
