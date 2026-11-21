@@ -267,14 +267,14 @@ body.application-open{overflow:hidden}
   text-wrap: pretty;
 }
 .hero-benefit {
-  max-width: 640px;
-  margin: 0 0 22px;
+  max-width: 680px;
+  margin: 0;
   color: var(--formation-accent);
   font-family: var(--serif);
-  font-size: clamp(1.3rem, 2.45vw, 2.2rem);
+  font-size: clamp(1.125rem, 1.85vw, 1.65rem);
   font-weight: 500;
   letter-spacing: -.032em;
-  line-height: 1.15;
+  line-height: 1.4;
   text-wrap: pretty;
 }
 .formation-page .hero-description { color: #e4e4e4; max-width: 575px; font-size: clamp(1rem, 1.55vw, 1.125rem); }
