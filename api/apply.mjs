@@ -1,3 +1,5 @@
+import { createBaserowLead } from '../lib/baserow-leads.mjs';
+
 const ATTIO_BASE = 'https://api.attio.com/v2';
 let cachedList;
 
@@ -99,7 +101,8 @@ export default async function handler(req, res) {
   }
   if (!req.headers['content-type']?.includes('application/json')) return send(res, 415, { error: 'invalid_content_type' });
   if (Number(req.headers['content-length']) > 16000) return send(res, 413, { error: 'payload_too_large' });
-  if (!process.env.ATTIO_API_KEY) return send(res, 503, { error: 'integration_unavailable' });
+  const baserowEndpoint = process.env.BASEROW_MCP_URL;
+  if (!baserowEndpoint && !process.env.ATTIO_API_KEY) return send(res, 503, { error: 'integration_unavailable' });
 
   let body;
   try {
@@ -118,10 +121,23 @@ export default async function handler(req, res) {
     return send(res, 400, { error: 'invalid_fields' });
   }
 
+  const navigation = navigationData(body.navigation, req);
+  if (baserowEndpoint) {
+    try {
+      await createBaserowLead({
+        endpoint: baserowEndpoint, name, email, phone,
+        campaign: navigation.campaign
+      });
+      return send(res, 200, { ok: true });
+    } catch {
+      console.error('GPT Experts Baserow MCP could not confirm lead capture');
+      return send(res, 502, { error: 'integration_failed' });
+    }
+  }
+
   const parts = name.split(' ');
   const firstName = parts.shift();
   const lastName = parts.join(' ');
-  const navigation = navigationData(body.navigation, req);
 
   try {
     const list = await targetList();

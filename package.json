@@ -1,0 +1,10 @@
+{
+  "name": "gpt-experts-site",
+  "private": true,
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/client": "2.4.0"
+  }
+}
