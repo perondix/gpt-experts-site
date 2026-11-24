@@ -41,6 +41,8 @@ const applicationForm = document.querySelector('#application-form');
 const applicationStatus = document.querySelector('#application-status');
 const applicationSuccess = document.querySelector('#application-success');
 const applicationSubmit = applicationForm.querySelector('button[type="submit"]');
+const applicationSubmitLabel = applicationSubmit.textContent;
+const applicationSuccessTitle = document.querySelector('#application-success-title');
 let applicationTrigger = null;
 let applicationSource = 'direct';
 
@@ -102,6 +104,8 @@ applicationDialog.addEventListener('close', () => {
   if (!applicationSuccess.hidden) {
     applicationSuccess.hidden = true;
     applicationForm.hidden = false;
+    applicationDialog.setAttribute('aria-labelledby', 'application-title');
+    applicationDialog.setAttribute('aria-describedby', 'application-description');
     applicationForm.reset();
     applicationStatus.textContent = '';
   }
@@ -163,11 +167,13 @@ applicationForm.addEventListener('submit', async (event) => {
     if (!response.ok) throw new Error('submission-failed');
     applicationForm.hidden = true;
     applicationSuccess.hidden = false;
-    applicationSuccess.querySelector('button').focus();
+    applicationDialog.setAttribute('aria-labelledby', 'application-success-title');
+    applicationDialog.setAttribute('aria-describedby', 'application-success-description');
+    applicationSuccessTitle.focus();
   } catch {
     applicationStatus.textContent = 'Não foi possível enviar agora. Tente novamente em instantes.';
   } finally {
     applicationSubmit.disabled = false;
-    applicationSubmit.textContent = 'ENVIAR MEU INTERESSE';
+    applicationSubmit.textContent = applicationSubmitLabel;
   }
 });

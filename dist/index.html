@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400..800&family=Source+Sans+3:wght@400..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css?v=20261121-1">
-  <script src="./script.js" defer></script>
+  <script src="./script.js?v=20261124-1" defer></script>
 </head>
 <body class="formation-page">
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -27,7 +27,7 @@
         <a class="brand" href="#topo" aria-label="GPT Experts, voltar ao início"><img src="./gpt-experts-logo.png" width="2172" height="724" alt="GPT Experts — The AI Builder School"></a>
         <img class="header-partner-badge" src="./openai-select-partner.png" width="1125" height="531" alt="OpenAI Select Partner">
       </div>
-      <a class="header-cta" href="#aplicar" data-open-application="header">Conhecer a Formação</a>
+      <a class="header-cta" href="#aplicar" data-open-application="header">Entrar na lista de espera</a>
     </div>
   </header>
 
@@ -39,7 +39,7 @@
           <h1 id="hero-title">Aprenda a usar AI para resolver problemas reais do seu trabalho</h1>
           <p class="hero-benefit">Pessoas que usam inteligência artificial de forma profissional têm mais espaço e vantagem competitiva nas empresas. Fique à frente tornando-se um expert em ChatGPT.</p>
           <div class="hero-actions">
-            <a class="button formation-button" href="#aplicar" data-open-application="hero">Conhecer a Formação</a>
+            <a class="button formation-button" href="#aplicar" data-open-application="hero">Entrar na lista de espera</a>
             <a class="formation-example-link" href="#vsl">Ver um exemplo na prática <span aria-hidden="true">↓</span></a>
           </div>
           <p class="formation-hero-note">Você pode começar sem saber programar.</p>
@@ -100,7 +100,7 @@
           </article>
         </div>
         <div class="formation-audience-cta">
-          <a class="button formation-button" href="#aplicar" data-open-application="audience">Conhecer a Formação</a>
+          <a class="button formation-button" href="#aplicar" data-open-application="audience">Entrar na lista de espera</a>
         </div>
       </div>
     </section>
@@ -139,7 +139,7 @@
           <p class="formation-kicker">Seu projeto aplicado</p>
           <h2 class="display" id="project-title">Seu projeto começa com um problema que você conhece.</h2>
           <p>Pode ser um relatório que demora a sair ou uma dúvida que sua equipe responde toda semana. Você vai aprender a transformar esse problema em uma solução testável e explicar por que ela vale a pena.</p>
-          <a class="button formation-button" href="#aplicar" data-open-application="programa">Conhecer a Formação</a>
+          <a class="button formation-button" href="#aplicar" data-open-application="programa">Entrar na lista de espera</a>
         </div>
         <div class="formation-project-brief">
           <p class="formation-kicker">O que apresentar à equipe</p>
@@ -177,8 +177,8 @@
     <section class="section formation-close dark" id="aplicar" aria-labelledby="formation-close-title">
       <div class="wrap">
         <h2 class="display" id="formation-close-title">Que processo você gostaria de melhorar no seu trabalho?</h2>
-        <p>Deixe seu contato para receber os detalhes do AI Builder Program e da próxima turma.</p>
-        <a class="button formation-button" href="#aplicar" data-open-application="final">Conhecer a Formação</a>
+        <p>Entre na lista de espera para receber os detalhes do lançamento do AI Builder Program.</p>
+        <a class="button formation-button" href="#aplicar" data-open-application="final">Entrar na lista de espera</a>
       </div>
     </section>
   </main>
@@ -187,7 +187,7 @@
     <div class="application-layout">
       <div class="application-intro">
         <div class="application-topline"><span>GPT EXPERTS / AI BUILDER PROGRAM</span><button class="application-close" type="button" aria-label="Fechar formulário" data-close-application>×</button></div>
-        <div class="application-pitch"><h2 id="application-title">Conhecer a Formação</h2><p id="application-description">Deixe seu contato para receber os detalhes do programa e da próxima turma.</p></div>
+        <div class="application-pitch"><h2 id="application-title">Lista de espera</h2><p id="application-description">Deixe seu contato para receber os detalhes do lançamento da formação.</p></div>
       </div>
       <div class="application-form-panel">
         <form id="application-form" novalidate>
@@ -199,10 +199,14 @@
           <input id="lead-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="30" placeholder="+55 (11) 99999-9999" required>
           <div class="application-honeypot" aria-hidden="true"><label for="lead-website">Website</label><input id="lead-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
           <label class="application-consent"><input id="lead-consent" name="consent" type="checkbox" required><span>Concordo em receber contato da GPT Experts por e-mail ou WhatsApp. Meus dados e informações desta visita, como origem, campanha e páginas vistas, serão usados para acompanhar meu interesse.</span></label>
-          <button class="application-submit" type="submit">ENVIAR MEU INTERESSE</button>
+          <button class="application-submit" type="submit">Entrar na lista de espera</button>
           <p class="application-status" id="application-status" role="status" aria-live="polite"></p>
         </form>
-        <div class="application-success" id="application-success" hidden><span>CADASTRO RECEBIDO</span><h3>Obrigado pelo<br><em>seu interesse.</em></h3><p>Recebemos seus dados. A GPT Experts entrará em contato com as próximas informações.</p><button type="button" data-close-application>VOLTAR PARA O SITE</button></div>
+        <div class="application-success" id="application-success" hidden>
+          <h3 id="application-success-title" tabindex="-1">Você está na lista de espera!</h3>
+          <p id="application-success-description">O lançamento do nosso curso exclusivo está previsto para <strong>12/12</strong>. Vamos entrar em contato em breve com os próximos detalhes. Obrigado pelo interesse!</p>
+          <button type="button" data-close-application>VOLTAR PARA O SITE</button>
+        </div>
       </div>
     </div>
   </dialog>
