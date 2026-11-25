@@ -13,6 +13,14 @@
     {
       "source": "/app-web-codex",
       "destination": "/app-web-codex/index.html"
+    },
+    {
+      "source": "/pequenos-negocios",
+      "destination": "/pequenos-negocios/index.html"
+    },
+    {
+      "source": "/pequenos-negocios-obrigado",
+      "destination": "/pequenos-negocios-obrigado/index.html"
     }
   ],
   "headers": [
