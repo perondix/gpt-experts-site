@@ -115,6 +115,15 @@ if (window.location.hash === '#aplicar') openApplication();
 applicationForm.addEventListener('submit', async (event) => {
   event.preventDefault();
   applicationStatus.textContent = '';
+  if (window.location.protocol === 'file:') {
+    const liveForm = document.createElement('a');
+    liveForm.href = 'https://www.gptexperts.com.br/#aplicar';
+    liveForm.textContent = 'Abrir formulário no site oficial';
+    liveForm.style.textDecoration = 'underline';
+    applicationStatus.append('Esta prévia local não envia cadastros. ', liveForm);
+    liveForm.focus();
+    return;
+  }
   if (!applicationForm.reportValidity()) return;
 
   const form = new FormData(applicationForm);
