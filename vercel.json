@@ -21,6 +21,14 @@
     {
       "source": "/pequenos-negocios-obrigado",
       "destination": "/pequenos-negocios-obrigado/index.html"
+    },
+    {
+      "source": "/gpt-contabilidade",
+      "destination": "/gpt-contabilidade/index.html"
+    },
+    {
+      "source": "/gpt-contabilidade-obrigado",
+      "destination": "/gpt-contabilidade-obrigado/index.html"
     }
   ],
   "headers": [
