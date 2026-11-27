@@ -33,6 +33,10 @@
     {
       "source": "/profissional-ia",
       "destination": "/profissional-ia/index.html"
+    },
+    {
+      "source": "/profissional-ia-obrigado",
+      "destination": "/profissional-ia-obrigado/index.html"
     }
   ],
   "headers": [
