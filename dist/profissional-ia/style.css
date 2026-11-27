@@ -1,0 +1,15 @@
+.book-title{font-size:clamp(32px,3.7vw,50px)}.guide-note{font-size:14px;color:#62675c;margin:16px 0 0}.preview-play{margin-top:14px;padding:12px 16px;border:1px solid #151515;background:transparent;color:#151515;font:700 14px Chivo,sans-serif;cursor:pointer}.preview-play:focus-visible{outline:3px solid #819640;outline-offset:3px}.preview-play[hidden]{display:none}
+@media (max-width: 800px) {
+  .outcome-grid { display: flex; flex-direction: column; gap: 18px; }
+  .outcome-grid article { position: sticky; top: 16px; padding: 24px; border: 1px solid #c9cfc1; border-radius: 16px; background: #f9faf4; box-shadow: 0 8px 24px rgba(21, 21, 21, .09); }
+  .outcome-grid article:nth-child(2) { top: 28px; }
+  .outcome-grid article:nth-child(3) { top: 40px; }
+  .outcome-grid article:nth-child(4) { top: 52px; }
+  .outcome-grid h3 { margin: 25px 0 12px; }
+  .outcome-grid p { margin-bottom: 0; }
+}
+@media (max-width: 800px) {
+  .badges { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; align-items: center; }
+  .badges .partner { grid-column: 1 / -1; width: 76px; height: 76px; }
+  .badges img:not(.partner) { width: min(100%, 76px); height: auto; aspect-ratio: 1; }
+}

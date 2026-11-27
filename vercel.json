@@ -29,6 +29,10 @@
     {
       "source": "/gpt-contabilidade-obrigado",
       "destination": "/gpt-contabilidade-obrigado/index.html"
+    },
+    {
+      "source": "/profissional-ia",
+      "destination": "/profissional-ia/index.html"
     }
   ],
   "headers": [
